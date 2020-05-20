@@ -1,0 +1,58 @@
+{
+    "name": "codeat3/laravel-mindchow",
+    "description": "",
+    "keywords": [
+        "codeat3",
+        "laravel-mindchow"
+    ],
+    "homepage": "https://github.com/codeat3/laravel-mindchow",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Swapnil Sarwe",
+            "email": "swapnilsarwe@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^7.0",
+        "kitetail/zttp": "^0.6.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codeat3\\LaravelMindchow\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codeat3\\LaravelMindchow\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": [
+            "vendor/bin/php-cs-fixer fix"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codeat3\\LaravelMindchow\\LaravelMindchowServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMindchow": "Codeat3\\LaravelMindchow\\LaravelMindchowFacade"
+            }
+        }
+    }
+}
