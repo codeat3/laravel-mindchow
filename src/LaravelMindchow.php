@@ -14,7 +14,7 @@ class LaravelMindchow
 
     private function getApiUrl()
     {
-        return self::DOMAIN . self::RANDOM_API_ENDPOINT;
+        return self::DOMAIN.self::RANDOM_API_ENDPOINT;
     }
 
     private function getHeaders()
@@ -25,7 +25,7 @@ class LaravelMindchow
         }
 
         return [
-            'Authorization' => 'Bearer ' . $apiKey,
+            'Authorization' => 'Bearer '.$apiKey,
             'Accept' => 'application/json',
         ];
     }
@@ -34,6 +34,7 @@ class LaravelMindchow
     public function random()
     {
         $response = Zttp::withHeaders($this->getHeaders())->get($this->getApiUrl());
+
         return $response->json();
     }
 }
